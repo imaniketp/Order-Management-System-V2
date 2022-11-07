@@ -1,0 +1,130 @@
+body{
+    display: flex;
+    justify-content: center;
+    background: url("https://images.hdqwalls.com/download/pizza-baked-chesse-spicy-7t-1600x900.jpg");
+	  background-size: 100%;
+}
+
+.container{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+
+.box h2{
+    color: #fff;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 10px #00b3ff, 
+                 0 0 20px #00b3ff,
+                 0 0 40px #00b3ff,
+                 0 0 80px #00b3ff,
+                 0 0 120px #00b3ff;
+}
+
+.order-id-input-wrapper {
+	width: 500px;
+	margin: 25px auto;
+}
+
+.order-status-card {
+	margin: 20px 0;
+  width: fit-content;
+}
+
+
+.order-status-card .card {
+	border-radius: 20px;
+  
+}
+
+.order-status-card .card-header{
+	background: #e31837;
+  color: white;
+	border-radius: 20px 20px 0 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.order-status-card .card-footer{
+	background: #e31837;
+  color: white;
+	border-radius: 0 0 20px 20px;
+}
+
+.order-status-card .card-text {
+	margin-bottom: 0.5rem;
+}
+
+.order-status-card .rounded-pill {
+	font-size: 1em;
+}
+
+.cancel-btn:hover {
+	cursor: pointer;
+}
+
+.btn-wrapper {
+	text-align: center;
+}
+
+.modal-header{
+  background-color: #e31837;
+  color: white;
+}
+.modal-footer{
+  background-color: #006491;
+  color: white;
+}
+.order-btn{
+  background-color:#e31837;
+}
+.cancel-btn{
+  background-color:#fff;
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#order-input-modal .modal-body {
+	padding: 2rem 3rem;
+  
+}
+.modal-dialog {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+.modal-content {
+  width: 80vw;
+}
+.pizzarow{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.card-body{
+  background-color: #006491;
+}
+
+.table{
+  color: white;
+}

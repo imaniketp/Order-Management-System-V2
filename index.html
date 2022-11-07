@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AP's PizZza</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-sm box">
+            <h2>AP's PizZza</h2>
+        </div>
+        <div class="btn-wrapper">
+            <button class="btn btn-danger" type="button" id="button-addon2" data-bs-toggle="modal"
+                data-bs-target="#order-input-modal">Create new order</button>
+        </div>
+        <div class="row" id="order-cards-wrapper">
+        </div>
+    </div>
+
+    <div class="modal fade " id="order-input-modal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create New Order</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+
+                    <form class="row g-3 needs-validation" novalidate>
+                        <div class="col-md-6">
+                            <label for="customerName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="customerName" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="customerPhone" class="form-label">Phone</label>
+                            <div class="input-group has-validation">
+                                <span class="input-group-text" id="inputGroupPrepend">+91</span>
+                                <input type="text" class="form-control" id="customerPhone"
+                                    aria-describedby="inputGroupPrepend" required>
+                            </div>
+                        </div>
+
+                        <div class="cards">
+                            <div class="pizzarow">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="Double_Cheese_Margherita.jpg" class="card-img-top" alt="Loding...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">DOUBLE CHEESE MARGHERITA</h5>
+                                        <p class="card-text">The ever-popular Margherita - loaded with extra cheese...
+                                            oodies of it!</p>
+                                        <b class="price1">Price: 220</b>
+                                        <button class="btn btn-danger" id="dcm" type="button"
+                                            onclick="add1()">Add</button>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="Peppy_Paneer.jpg" class="card-img-top" alt="Loading...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">PEPPY PANEER</h5>
+                                        <p class="card-text">Chunky paneer with crisp capsicum and spicy red pepper -
+                                            quite
+                                            a mouthful!</p>
+                                        <b class="price2">Price: 270</b>
+                                        <button class="btn btn-danger" id="pp" type="button"
+                                            onclick="add2()">Add</button>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="Corn_&_Cheese.jpg" class="card-img-top" alt="Loading...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CHEESE N CORN</h5>
+                                        <p class="card-text">Cheese I Golden Corn | Cheese n Corn Pizza</p>
+                                        <b class="price3">Price: 220</b>
+                                        <button class="btn btn-danger" id="cnc" type="button"
+                                            onclick="add3()">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pizzarow">
+
+                                <div class="card" style="width: 18rem;">
+                                    <img src="Chicken-golden-delight.png" class="card-img-top" alt="Loding...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CHICKEN GOLDEN DELIGHT</h5>
+                                        <p class="card-text">Barbeque chicken with a topping of golden corn loaded with
+                                            extra cheese. Worth its weight in gold!</p>
+                                        <b class="price1">Price: 309</b>
+                                        <button class="btn btn-danger" id="cgd" type="button"
+                                            onclick="add4()">Add</button>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="chicken-dominator.png" class="card-img-top" alt="Loading...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CHICKEN DOMINATOR</h5>
+                                        <p class="card-text">Treat your taste buds with Double Pepper Barbecue Chicken,
+                                            Peri-Peri Chicken, Chicken Tikka & Grilled Chicken Rashers</p>
+                                        <b class="price2">Price: 359</b>
+                                        <button class="btn btn-danger" id="cd" type="button"
+                                            onclick="add5()">Add</button>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 18rem;">
+                                    <img src="chicken-pepperon.png" class="card-img-top" alt="Loading...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CHICKEN PEPPERONI</h5>
+                                        <p class="card-text">A classic American taste! Relish the delectable flavor of
+                                            Chicken Pepperoni, topped with extra cheese</p>
+                                        <b class="price3">Price: 359</b>
+                                        <button class="btn btn-danger" id="cp" type="button"
+                                            onclick="add6()">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn cancel-btn" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn order-btn" data-bs-dismiss="modal"
+                        onclick="executeOrder()">Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/createOrderCard.js"></script>
+    <script src="js/createOrderCardBillTable.js"></script>
+    <script src="js/orderStatus.js"></script>
+    <script src="js/billDetails.js"></script>
+</body>
+
+</html>
